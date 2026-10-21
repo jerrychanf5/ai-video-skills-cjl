@@ -13,23 +13,15 @@
 
 两个 Skill 各自独立可用，也可串联使用。
 
-## 快速安装
+## 快速安装（一行命令）
 
 ```bash
-# 1. 克隆仓库
-git clone https://github.com/jerrychanf5/ai-video-skills-cjl.git
-
-# 2. 把 skills 复制到 Claude Code 的 skills 目录
-cp -r ai-video-skills-cjl/skills/ai-video-creative ~/.claude/skills/
-cp -r ai-video-skills-cjl/skills/ai-video-prompt ~/.claude/skills/
-
-# 3. 把知识库文档复制到 skills 目录（Skill 需要引用这些文件）
-mkdir -p ~/.claude/skills/ai-video-creative/产物 ~/.claude/skills/ai-video-prompt/产物
-cp ai-video-skills-cjl/docs/*.md ~/.claude/skills/ai-video-creative/产物/
-cp ai-video-skills-cjl/docs/*.md ~/.claude/skills/ai-video-prompt/产物/
+curl -fsSL https://raw.githubusercontent.com/jerrychanf5/ai-video-skills-cjl/main/install.sh | bash
 ```
 
-安装后在 Claude Code 中输入触发词即可使用，如"帮我做个视频创意构思"。
+脚本会自动检测你已安装的 AI 工具，并安装到对应目录（支持 Claude Code、Codex、Cursor、OpenClaw、Gemini CLI、Baoyu 等）。
+
+**后续更新**：重新执行同一行命令即可拉取最新版本。
 
 ## 使用流程
 
